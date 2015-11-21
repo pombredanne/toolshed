@@ -1,5 +1,84 @@
 News
 ====
+0.4.3
+-----
+handle (ignore) SIGPIPE errors.
+
+0.3.7
+-----
+python 2.6 compat and travis config (via @superbobry)
+
+0.3.5
+-----
+when using nopen/reader as subprocess wrapper, send stderr as
+it appears to sys.stderr. (previously waited til process was done)
+
+
+0.3.3
+-----
+python 3 compatible
+
+0.3.2
+-----
+add skip_while kwarg to reader(). takes a function that accepts a list
+of tokens (from a line) and returns true to skip the first lines of a file.
+
+0.3.0
+-----
+utilities for working with multiprocessing pools.
+
+0.2.9
+-----
+support for bash process substition, e.g.: reader("|cmd <(some args)")
+
+0.2.8
+-----
+reader supports streaming remote .gz files.
+
+0.2.7
+-----
+* reader supports .xls files.
+
+0.2.6
+-----
+* don't print an extra newline when reading empty stderr from a process.
+
+0.2.5
+-----
+* allow splitting on none or on regexp.
+
+0.2.4
+-----
+* if header is a callable, it's called for each row (instead of returning
+  dict).
+
+0.2.3
+-----
+* if reader can accept the generator returned from reader()
+
+0.2.2
+-----
+* if an integer is sent to nopen, then nopen(sys.argv[arg]) is returned.
+
+0.2.1
+-----
+* fix handling when there's an exception in the loop that calls a process
+  
+
+0.2.0
+-----
+* better error message from Popen when using nopen("| something")
+
+0.1.9
+-----
+* if the header argument to `reader` is "ordered" then an ordered
+  dictionary is used.
+
+
+0.1.8
+-----
+* Add is_newer_b(apath, bpaths) to check that all b files are newer
+  than apath.
 
 0.1.3
 -----
